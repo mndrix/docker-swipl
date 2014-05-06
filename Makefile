@@ -14,7 +14,7 @@ distribute/swipl-binary.tgz: compiler/Dockerfile
 image: distribute/Dockerfile distribute/swipl-binary.tgz
 	docker build -t swipl:latest distribute
 
-swipl-image.tgz:
+swipl-image.tgz: image
 	docker save swipl:latest > swipl-image.tar
 	gzip -9 swipl-image.tar
 	mv swipl-image.tar.gz swipl-image.tgz
