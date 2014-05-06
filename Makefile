@@ -11,13 +11,10 @@ distribute/swipl-binary.tgz: compiler/Dockerfile
 	-docker cp swipl-binary:swipl-binary.tgz .
 	mv swipl-binary.tgz distribute/swipl-binary.tgz
 
+# build an image with SWI Prolog binary installed
 image: distribute/Dockerfile distribute/swipl-binary.tgz
-	docker build -t swipl:latest distribute
+	docker build -t mndrix/swipl:latest distribute
 
-swipl-image.tgz: image
-	docker save swipl:latest > swipl-image.tar
-	gzip -9 swipl-image.tar
-	mv swipl-image.tar.gz swipl-image.tgz
-
+# push changes to Docker's index
 push: swipl-image.tgz
-	gsutil -m cp swipl-image.tgz gs://lending_club/
+	docker push mndrix/swipl:latest
