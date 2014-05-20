@@ -9,7 +9,7 @@ RUN apt-get install -y build-essential curl libarchive13 libarchive-dev libgmp-d
 
 # obtain SWI Prolog source
 RUN mkdir swipl-src
-RUN curl 'http://www.swi-prolog.org/download/devel/src/pl-7.1.14.tar.gz' | tar -x -z --strip-components=1 -C swipl-src -f -
+RUN curl 'http://www.swi-prolog.org/download/devel/src/pl-7.1.15.tar.gz' | tar -x -z --strip-components=1 -C swipl-src -f -
 ADD build swipl-src/build
 
 # build SWI Prolog
