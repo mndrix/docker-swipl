@@ -6,6 +6,7 @@ MAINTAINER Michael Hendricks <michael@ndrix.org>
 RUN apt-get update
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y build-essential curl libarchive13 libarchive-dev libgmp-dev libossp-uuid-dev libreadline-dev libssl-dev zlib1g-dev
+RUN apt-get clean
 
 # obtain SWI Prolog source
 RUN mkdir swipl-src
