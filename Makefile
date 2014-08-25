@@ -5,6 +5,7 @@ all:
 
 # compile a Linux binary for SWI Prolog
 distribute/swipl-binary.tgz: compiler/Dockerfile
+	docker pull debian:jessie
 	docker build -t swipl-compiler:latest compiler
 	-docker rm -f swipl-binary
 	docker run --name="swipl-binary" swipl-compiler /bin/bash
