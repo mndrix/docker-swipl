@@ -16,7 +16,7 @@
 # remainder of the commandline as privilaged   user. E.g., if you change
 # PREFIX to /usr/local you typically must change SUDO to "sudo"
 
-PREFIX=$HOME/swipl
+PREFIX=/swipl
 SUDO=
 #SUDO="sudo"
 
