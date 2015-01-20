@@ -17,5 +17,5 @@ image: distribute/Dockerfile distribute/swipl-binary.tgz
 	docker build -t mndrix/swipl:latest distribute
 
 # push changes to Docker's index
-push: swipl-image.tgz
+push:
 	docker push mndrix/swipl:latest
