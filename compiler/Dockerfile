@@ -10,7 +10,7 @@ RUN apt-get clean
 
 # obtain SWI Prolog source
 RUN mkdir swipl-src
-RUN curl 'http://www.swi-prolog.org/download/devel/src/swipl-7.3.25.tar.gz' | tar -x -z --strip-components=1 -C /swipl-src -f -
+RUN curl 'http://www.swi-prolog.org/download/devel/src/swipl-7.3.26.tar.gz' | tar -x -z --strip-components=1 -C /swipl-src -f -
 ADD build swipl-src/build
 
 # build SWI Prolog
